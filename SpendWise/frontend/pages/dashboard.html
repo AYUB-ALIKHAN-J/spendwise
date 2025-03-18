@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - SpendWise</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Dashboard</h1>
+    <nav>
+      <a href="index.html">Logout</a>
+    </nav>
+  </header>
+  <section id="expenses">
+    <h2>Your Expenses</h2>
+    <ul id="expenseList"></ul>
+    <form id="addExpenseForm">
+      <input type="number" id="amount" placeholder="Amount" required>
+      <input type="text" id="category" placeholder="Category" required>
+      <input type="date" id="date" required>
+      <button type="submit">Add Expense</button>
+    </form>
+  </section>
+  <section id="budget">
+    <h2>Your Budget</h2>
+    <form id="setBudgetForm">
+      <input type="number" id="budgetAmount" placeholder="Budget Amount" required>
+      <input type="month" id="month" required>
+      <button type="submit">Set Budget</button>
+    </form>
+  </section>
+  <script src="../js/expenses.js"></script>
+  <script src="../js/budget.js"></script>
+</body>
+</html>

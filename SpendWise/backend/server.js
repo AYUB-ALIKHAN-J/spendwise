@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: '*' })); // Allow all origins
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);

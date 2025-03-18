@@ -11,7 +11,7 @@
     <h1>Dashboard</h1>
     <nav>
       <a href="index.html">Logout</a>
-    </nav>
+    </nav>ton id="logoutButton" style="background: none; border: none; color: #7289da; cursor: pointer;">Logout</button>
   </header>
   <section id="expenses">
     <h2>Your Expenses</h2>
@@ -19,19 +19,27 @@
     <form id="addExpenseForm">
       <input type="number" id="amount" placeholder="Amount" required>
       <input type="text" id="category" placeholder="Category" required>
-      <input type="date" id="date" required>
+      <input type="date" id="date" required>holder="Category" required>
       <button type="submit">Add Expense</button>
-    </form>
+    </form>on type="submit">Add Expense</button>
   </section>
   <section id="budget">
     <h2>Your Budget</h2>
     <form id="setBudgetForm">
       <input type="number" id="budgetAmount" placeholder="Budget Amount" required>
-      <input type="month" id="month" required>
+      <input type="month" id="month" required>laceholder="Budget Amount" required>
       <button type="submit">Set Budget</button>
-    </form>
+    </form>on type="submit">Set Budget</button>
   </section>
-  <script src="../js/expenses.js"></script>
-  <script src="../js/budget.js"></script>
-</body>
-</html>
+  <section id="summary">
+    <h2>Summary</h2>
+    <p>Total Expenses: <span id="totalExpenses">$0.00</span></p>t>
+    <p>Remaining Budget: <span id="remainingBudget">$0.00</span></p>pt type="module" src="../js/budget.js"></script>
+  </section>pt type="module" src="../js/logout.js"></script>
+  <script type="module" src="../js/config.js"></script></body>
+
+
+
+
+
+</html></body>  <script type="module" src="../js/budget.js"></script>  <script type="module" src="../js/expenses.js"></script></html>

@@ -3,10 +3,14 @@ const Expense = require('../models/expenseModel');
 const ExpenseController = {
   addExpense: async (req, res) => {
     const { amount, category, date } = req.body;
+    if (!amount || !category || !date) {
+      return res.status(400).json({ error: 'All fields are required' });
+    }
     try {
-      await Expense.create(req.user.id, amount, category, date);
-      res.status(201).json({ message: 'Expense added successfully' });
+      const result = await Expense.create(req.user.id, amount, category, date);
+      res.status(201).json({ message: 'Expense added successfully', expenseId: result.insertId });
     } catch (error) {
+      console.error('Error adding expense:', error);
       res.status(500).json({ error: 'Failed to add expense' });
     }
   },

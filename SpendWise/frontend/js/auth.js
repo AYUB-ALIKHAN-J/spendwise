@@ -1,9 +1,11 @@
+const BASE_URL = 'http://localhost:5000';
+
 document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
   e.preventDefault();
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-  const response = await fetch('/api/auth/login', {
+  const response = await fetch(`${BASE_URL}/api/auth/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, password }),
@@ -24,7 +26,7 @@ document.getElementById('registerForm')?.addEventListener('submit', async (e) =>
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-  const response = await fetch('/api/auth/register', {
+  const response = await fetch(`${BASE_URL}/api/auth/register`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name, email, password }),
